@@ -8,6 +8,6 @@ module.exports = {
                 .setDescription("Ping: ")
                 .setFooter("Message Bot Created By Joshh#0922")
                 .setTimestamp(Date.now());
-        message.channel.sendEmbed(PingEmbed);
+        message.channel.send({ embed: PingEmbed });
     }
 }
