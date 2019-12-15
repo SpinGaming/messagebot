@@ -1,11 +1,34 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const PREFIX = "$";
+
+const fs = require('fs');
+bot.commands = new Discord.Collection();
+
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+for(const file of commandFiles){
+    const command = require(`./commands/${file}`);
+
+    bot.commands.set(command.name, command);
+}
+
 
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
+bot.on('message', message => {
 
+    let args = message.content.substring(PREFIX.length).split(" ");
+
+    switch (args[0]) {
+        
+        case 'ping':
+            bot.commands.get('ping').execute(message, args);
+        break;
+        
+    }
+})
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
