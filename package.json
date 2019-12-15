@@ -2,7 +2,7 @@
   "name": "messagebot",
   "version": "1.0.0",
   "description": "",
-  "main": "Discord.js",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
