@@ -7,6 +7,7 @@ module.exports = {
 
         let PongEmbed = new Discord.RichEmbed()
             .setTitle("🏓" + "**" + "Pong!" + "**")
+            .setColor(0x00FF00)
             .setDescription("Ping: " + responseTime + "ms")
             .setTimestamp(Date.now())
             .setFooter("Message Bot Created By Joshh#0922");
