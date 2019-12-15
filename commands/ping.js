@@ -3,6 +3,6 @@ module.exports = {
     description: 'Says pong!',
     execute(message, args){
 
-        message.channel.send("**" + "My ping is: " + Math.round(message.bot.ping) + "ms" + "**");
+        message.channel.send("Ping command working");
     }
 }
