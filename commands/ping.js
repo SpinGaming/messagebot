@@ -2,14 +2,13 @@ module.exports = {
     name: 'ping',
     description: 'Says pong!',
     execute(message, args){
-        let embed = new Discord.RichEmbed()
-        .setAuthor(bot.user.username, bot.user.displayAvatarURL)
-        .setColor(0x00FF00)
-        .addField("Ping: ")
-        .addField('Developer', '<@366614368923942912>')
-        .setFooter(`ID: ${bot.user.id} | Bot Created`)
-        .setTimestamp(moment.utc(bot.user.createdAt).format('MM.DD.YYYY'));
-
-    message.channel.send({ embed: embed });
+        const embed = new Discord.RichEmbed()
+                .setTitle("🏓 Pong!")
+                .setColor(0x7289DA)
+                .setDescription("Ping")
+                .setThumbnail("http://icons.iconarchive.com/icons/martz90/hex/512/messages-icon.png")
+                .setFooter('ID: '+ bot.user.id +" | Message Bot By <@366614368923942912>")
+                .setTimestamp(Date.now());
+            message.channel.sendEmbed(embed);
     }
 }
