@@ -7,7 +7,7 @@ var version = '1.0.1';
 
 bot.on('ready', () => {
     console.log('This Bot Is Online!');
-})
+});
 
 bot.on('message', message => {
 
@@ -19,7 +19,7 @@ bot.on('message', message => {
             break;
         
     }
-})
+});
 
 
 
