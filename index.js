@@ -1,11 +1,14 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const token = "NjU1NzQ2MjU4NTIyMDc5MjMy.XfYljw.qHNIFMRzVv6bTS8rECJa90fFvp8";
-const PREFIX = "$";
+const token = 'NjU1NDMwMTExODc2ODc0Mjcx.XfT-7A.H4QGBDzLKZpfk6tqeraLDwLvb6Q';
+
+var PREFIX = '$';
+var version = '1.0.1';
+
 
 bot.on('ready', () => {
-    console.log("The bot is online!");
-});
+    console.log('This Bot Is Online!');
+})
 
 bot.on('message', message => {
 
@@ -15,7 +18,10 @@ bot.on('message', message => {
         case 'ping':
             message.channel.sendMessage('Pong!')
             break;
-
+        
     }
-});
+})
+
+
+
 bot.login(process.env.BOT_TOKEN);
