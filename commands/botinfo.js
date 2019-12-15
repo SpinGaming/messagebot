@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const bot = './index.js/';
+var version = './index.js/';
 module.exports = {
     name: 'botinfo',
     description: 'Displays Bot Info',
     execute(message, args){
 
         let embed = new Discord.RichEmbed()
-            .setAuthor(bot.user.username, bot.user.displayAvatarURL)
             .setColor(0x00FF00)
             .addField('Version', version, true)
             .addField('Library', 'index.js',true)
