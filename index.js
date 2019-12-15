@@ -7,4 +7,15 @@ bot.on('ready', () => {
     console.log("The bot is online!");
 });
 
+bot.on('message', message => {
+
+    let args = message.content.substring(PREFIX.length).split(" ");
+
+    switch (args[0]) {
+        case 'ping':
+            message.channel.sendMessage('Pong!')
+            break;
+
+    }
+});
 bot.login(process.env.BOT_TOKEN);
