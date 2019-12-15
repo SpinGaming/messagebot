@@ -2,7 +2,7 @@ module.exports = {
     name: 'ping',
     description: 'Says pong!',
     execute(message, args){
-            const PingEmbed = new RichEmbed()
+            const PingEmbed = new Discord.RichEmbed()
                 .setTitle("🏓 Pong!")
                 .setColor(0x00FF00)
                 .setDescription("Ping: ")
