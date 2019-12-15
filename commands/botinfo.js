@@ -26,6 +26,6 @@ module.exports = {
             .addField('Developer', '<@366614368923942912>')
             .setFooter("Message bot 2019")
 
-        message.channel.edit({ embed: embed });
+        message.channel.send({ embed: embed });
     }
 }
