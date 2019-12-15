@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
-const bot = './index.js/';
-var version = './index.js/';
+const bot = new Discord.Client();
+var version = '1.0.1';
 module.exports = {
     name: 'botinfo',
     description: 'Displays Bot Info',
@@ -12,8 +12,7 @@ module.exports = {
             .addField('Library', 'index.js',true)
             .addField('Developer', '<@366614368923942912>')
             .setFooter(`ID: ${bot.user.id} | Bot Created`)
-            .setTimestamp(moment.utc(bot.user.createdAt).format('MM.DD.YYYY'));
-    
+            
         message.channel.send({ embed: embed });
     }
 }
