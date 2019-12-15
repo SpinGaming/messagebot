@@ -17,10 +17,10 @@ module.exports = {
             d = Math.floor(h / 24);
             h = h % 24;
             return {
-                d: d
-                , h: h
-                , m: m
-                , s: s
+                d: d,
+                h: h,
+                m: m,
+                s: s
             };
         };
     
@@ -41,7 +41,7 @@ module.exports = {
             .addField('Library', 'index.js',true)
             .addField('Developer', '<@366614368923942912>')
             .setFooter("Message bot 2019")
-            
         message.channel.send({ embed: embed });
+        message.channel.edit({ embed: embed });
     }
 }
