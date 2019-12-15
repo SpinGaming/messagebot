@@ -3,7 +3,6 @@ module.exports = {
     name: 'botinfo',
     description: 'Displays Bot Info',
     execute(message, args){
-        const Discord = require('discord.js');
 
         function convertMS(ms) {
             var d, h, m, s;
