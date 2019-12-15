@@ -27,6 +27,9 @@ bot.on('message', message => {
             bot.commands.get('ping').execute(message, args);
         break;
         
+        case 'botinfo':
+            bot.commands.get('botinfo').execute(message, args);
+        break;
     }
 })
 
