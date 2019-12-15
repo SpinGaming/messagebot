@@ -4,9 +4,9 @@
   "description": "",
   "main": "Discord.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "author": "",
+  "author": "Joshh",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.5.1"
