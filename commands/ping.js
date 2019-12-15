@@ -4,13 +4,22 @@ module.exports = {
     description: 'Says pong!',
     execute(message, args){
         
-        const embed = new Discord.RichEmbed()
-                .setTitle("🏓 Pong!")
-                .setColor("e64e4e")
-                .setDescription("Ping")
-                .setThumbnail("http://icons.iconarchive.com/icons/martz90/hex/512/messages-icon.png")
-                .setFooter("ID: ${bot.user.id}  | Message Bot By <@366614368923942912>")
-                .setTimestamp(Date.now());
-            message.channel.send({ embed: embed });
+        startTime = Date.now();
+    message.delete();
+    message.channel.send("Checking. . .").then((message) => {
+        endTime = Date.now();
+
+        let ping = Math.round(endTime - startTime)
+        let rounded = ping / 1000
+        let member = message.author
+
+        let embed = new Discord.RichEmbed()
+        .setTitle('🏓 Pong!')
+        .setColor(0x00FF00)
+        .setDescription(`Current ping: **${ping}ms**`)
+        .setTimestamp();
+
+        message.edit({ embed: embed })
+    });
     }
 }
