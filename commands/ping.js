@@ -1,8 +1,9 @@
+const Discord = require('discord.js');
 module.exports = {
     name: 'ping',
     description: 'Says pong!',
     execute(message, args){
-        const Discord = require('discord.js');
+        
         const embed = new Discord.RichEmbed()
                 .setTitle("🏓 Pong!")
                 .setColor("e64e4e")
