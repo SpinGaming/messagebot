@@ -7,7 +7,7 @@ const fs = require('fs');
 bot.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
-for(const file of commandFiles){
+for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
 
     bot.commands.set(command.name, command);
@@ -18,28 +18,28 @@ bot.on('ready', () => {
     console.log('I am ready!');
 })
 
-    
+
 bot.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
     switch (args[0]) {
-        
+
         case 'ping':
             bot.commands.get('ping').execute(message, args);
-        break;
-        
+            break;
+
         case 'botinfo':
             bot.commands.get('botinfo').execute(message, args);
-        break;
-        
+            break;
+
         case 'ban':
             bot.commands.get('ban').execute(message, args);
-        break;
+            break;
 
         case 'ban':
             bot.commands.get('kick').execute(message, args);
-        break;
+            break;
     }
 })
 
