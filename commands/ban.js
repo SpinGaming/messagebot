@@ -6,6 +6,8 @@ module.exports = {
     description: 'Bans a person',
     execute(message, args){
 
+if(member.hasPermissions('BAN_MEMBERS')){
+
         const user = message.mentions.users.first();
 
         if (user) {
@@ -39,7 +41,8 @@ message.delete();
             message.reply("Must specify a person");
 message.delete();
         }
-
+} else {
+message.reply("Insuffiecient Permissions");
 
     }
 }
