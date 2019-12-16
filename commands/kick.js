@@ -33,9 +33,11 @@ message.delete();
                 });
             } else {
                 message.reply("Must specify a person");
+message.delete();
             }
         } else {
             message.reply("Must specify a person");
+message.delete();
         }
 
     }
