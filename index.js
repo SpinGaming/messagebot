@@ -6,6 +6,8 @@ const moment = require('moment');
 const fs = require('fs');
 bot.commands = new Discord.Collection();
 
+var version = '1.0.1'
+
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
@@ -59,7 +61,7 @@ bot.on('message', message => {
                 .setAuthor(bot.user.username, bot.user.displayAvatarURL)
                 .setColor(0x00FF00)
                 .addField('Uptime', uptime)
-                .addField('Version', config.version, true)
+                .addField('Version', version, true)
                 .addField('Library', 'Discord.JS', true)
                 .addField('Developer', '<@264384820698677249>')
                 .setFooter(`ID: ${bot.user.id} | Bot Created`)
