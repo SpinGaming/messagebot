@@ -12,17 +12,17 @@ module.exports = {
             const member = member.guild.member(user);
 
             if (member) {
-                member.kick('You were kicked for trolling!').then(() => {
+                member.kick().then(() => {
                     message.reply(`Successfully kicked ${user.tag}`)
                 }).catch(err => {
-                    message.reply('I was unable to kick the member');
+                    message.reply('Error2');
                     console.log(err);
                 });
             } else {
-                message.reply("That user isn\'t in this server!");
+                message.reply("Error3");
             }
         } else {
-            message.reply("You need to specify a person!");
+            message.reply("Error4");
         }
 
     }
