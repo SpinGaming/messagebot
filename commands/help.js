@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 module.exports = {
-    name: 'botinfo',
-    description: 'Displays Bot Info',
+    name: 'help',
+    description: 'Displays Help Message',
     execute(message, args){
 
         const HelpEmbed = new Discord.RichEmbed()
