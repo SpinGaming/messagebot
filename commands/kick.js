@@ -6,7 +6,7 @@ module.exports = {
     description: 'Kicks a person',
     execute(message, args) {
 
-if(member.hasPermissions('KICK_MEMBERS'){
+if(message.author.hasPermissions(['KICK_MEMBERS']){
 
         const user = message.mentions.users.first();
 
