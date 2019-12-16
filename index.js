@@ -62,12 +62,13 @@ bot.on('message', message => {
                 .setColor(0x00FF00)
                 .addField('Uptime', uptime)
                 .addField('Version', version, true)
-                .addField('Library', 'Discord.JS', true)
-                .addField('Developer', '<@264384820698677249>')
+                .addField('Library', 'index.JS', true)
+                .addField('Developer', '<@366614368923942912>')
                 .setFooter(`ID: ${bot.user.id} | Bot Created`)
                 .setTimestamp(moment.utc(bot.user.createdAt).format('MM.DD.YYYY'));
     
             message.channel.send({ embed: embed });
+            message.delete();
             break;
 
         case 'ban':
@@ -91,6 +92,7 @@ bot.on('message', message => {
         .setAuthor(bot.user.username, bot.user.displayAvatarURL)
         .setTimestamp();
         message.channel.send({ embed: HelpEmbed });
+        message.delete();
             break;
 
     }
