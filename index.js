@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const PREFIX = "$";
-
+const moment = require('moment');
 
 const fs = require('fs');
 bot.commands = new Discord.Collection();
@@ -44,6 +44,7 @@ bot.on('message', message => {
         case 'help':
             const HelpEmbed = new Discord.RichEmbed()
         .setTitle("ℹ️ | Bot Help")
+        .setColor('BLUE')
         .addField("Prefix", "$")
         .addField("$ping", "Displays Bot Ping", true)
         .addField("$botinfo", "Displays Bot Info", true)
