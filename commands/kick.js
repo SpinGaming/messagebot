@@ -9,20 +9,20 @@ module.exports = {
         const user = message.mentions.users.first();
 
         if (user) {
-            const member = member.guild.member(user);
+            const member = message.guild.member(user);
 
             if (member) {
-                member.kick().then(() => {
+                member.kick('You were kicked').then(() => {
                     message.reply(`Successfully kicked ${user.tag}`)
                 }).catch(err => {
-                    message.reply('Error2');
+                    message.reply('Unable to kick user');
                     console.log(err);
                 });
             } else {
-                message.reply("Error3");
+                message.reply("Must specify a person");
             }
         } else {
-            message.reply("Error4");
+            message.reply("Must specify a person");
         }
 
     }
