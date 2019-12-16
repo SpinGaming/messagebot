@@ -6,8 +6,6 @@ module.exports = {
     description: 'Kicks a person',
     execute(message, args) {
 
-        if (!args[1]) message.channel.send("You need to mention a person that you want to kick!")
-
         const user = message.mentions.users.first();
 
         if (user) {
@@ -21,10 +19,10 @@ module.exports = {
                     console.log(err);
                 });
             } else {
-                message.reply("That user isn\'t in this server!")
+                message.reply("That user isn\'t in this server!");
             }
         } else {
-            message.reply("That user isn\'t in the server!");
+            message.reply("You need to specify a person!");
         }
 
     }
