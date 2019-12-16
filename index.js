@@ -31,6 +31,10 @@ bot.on('message', message => {
         case 'botinfo':
             bot.commands.get('botinfo').execute(message, args);
         break;
+        
+        case 'ban':
+            bot.commands.get('ban').execute(message, args);
+        break;
     }
 })
 
