@@ -57,7 +57,7 @@ bot.on('message', message => {
     
             let embed = new Discord.RichEmbed()
                 .setAuthor(bot.user.username, bot.user.displayAvatarURL)
-                .setColor(config.color)
+                .setColor(0x00FF00)
                 .addField('Uptime', uptime)
                 .addField('Version', config.version, true)
                 .addField('Library', 'Discord.JS', true)
