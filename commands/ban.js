@@ -12,7 +12,7 @@ module.exports = {
             const member = message.guild.member(user);
 
             if (member) {
-                member.ban('You were banned').then(() => {
+                member.ban(`Banned by: ${message.author.tag}`).then(() => {
                     const BanSuccess = new Discord.RichEmbed()
                     .setTitle("✅ Successful Ban")
                     .setDescription(`Successfully banned ${user.tag}`)

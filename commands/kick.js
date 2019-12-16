@@ -12,7 +12,7 @@ module.exports = {
             const member = message.guild.member(user);
 
             if (member) {
-                member.ban('You were banned').then(() => {
+                member.kick(`Kicked by: ${message.author.tag}`).then(() => {
                     const KickSuccess = new Discord.RichEmbed()
                     .setTitle("✅ Successful Kick")
                     .setDescription(`Successfully kicked ${user.tag}`)
