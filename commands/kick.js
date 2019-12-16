@@ -12,10 +12,21 @@ module.exports = {
             const member = message.guild.member(user);
 
             if (member) {
-                member.kick('You were kicked').then(() => {
-                    message.reply(`Successfully kicked ${user.tag}`)
+                member.ban('You were banned').then(() => {
+                    const KickSuccess = new Discord.RichEmbed()
+                    .setTitle("✅ Successful Kick")
+                    .setDescription(`Successfully kicked ${user.tag}`)
+                    .setColor(0x00FF00)
+                    .setTimestamp();
+                    message.channel.send({ embed: KickSuccess});
+
                 }).catch(err => {
-                    message.reply('Unable to kick user');
+                    const KickFailed = new Discord.RichEmbed()
+                    .setTitle("❌ Failed Kick")
+                    .setDescription(`Unable to kick ${user.tag}`)
+                    .setColor(0xFFFF0000)
+                    .setTimestamp();
+                    message.channel.send({ embed: KickFailed});
                     console.log(err);
                 });
             } else {
