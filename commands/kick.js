@@ -24,7 +24,7 @@ module.exports = {
                     const KickFailed = new Discord.RichEmbed()
                     .setTitle("❌ Failed Kick")
                     .setDescription(`Unable to kick ${user.tag}`)
-                    .setColor(0xFFFF0000)
+                    .setColor('RED')
                     .setTimestamp();
                     message.channel.send({ embed: KickFailed});
                     console.log(err);

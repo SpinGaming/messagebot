@@ -24,7 +24,7 @@ module.exports = {
                     const BanFailed = new Discord.RichEmbed()
                     .setTitle("❌ Failed Ban")
                     .setDescription(`Unable to ban ${user.tag}`)
-                    .setColor(0xFFFF0000)
+                    .setColor('RED')
                     .setTimestamp();
                     message.channel.send({ embed: BanFailed});
                     console.log(err);
