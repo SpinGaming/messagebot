@@ -19,6 +19,7 @@ module.exports = {
                     .setColor(0x00FF00)
                     .setTimestamp();
                     message.channel.send({ embed: BanSuccess});
+message.delete();
 
                 }).catch(err => {
                     const BanFailed = new Discord.RichEmbed()
@@ -27,6 +28,7 @@ module.exports = {
                     .setColor('RED')
                     .setTimestamp();
                     message.channel.send({ embed: BanFailed});
+message.delete();
                     console.log(err);
                 });
             } else {
