@@ -37,7 +37,7 @@ bot.on('message', message => {
             bot.commands.get('ban').execute(message, args);
             break;
 
-        case 'ban':
+        case 'kick':
             bot.commands.get('kick').execute(message, args);
             break;
     }
