@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const PREFIX = "$";
+const DED = "ded";
 
 const fs = require('fs');
 bot.commands = new Discord.Collection();
@@ -17,6 +18,14 @@ bot.on('ready', () => {
     console.log('I am ready!');
 })
 
+bot.on('message', message => {
+    let args = message.content.substring(DED.length).split(" ");
+    
+    switch (args[0]) {
+        case ' ':
+            bot.commands.get('ded'.execute(message, args);
+        break;
+    
 bot.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
