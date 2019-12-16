@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const PREFIX = "$";
 
+
 const fs = require('fs');
 bot.commands = new Discord.Collection();
 
