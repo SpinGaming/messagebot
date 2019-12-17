@@ -95,6 +95,10 @@ bot.on('message', message => {
         message.delete();
             break;
 
+        case 'setup':
+            bot.commands.get('setup').execute(message, args);
+            break;
+
     }
 })
 
