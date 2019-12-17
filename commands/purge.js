@@ -12,8 +12,8 @@ module.exports = {
 
             message.channel.fetchMessages({limit: Math.min(messagecount + 1, 100)}).then(messages => {
                 messages.forEach(m => {
-                    if(m.author.id == bot.user.id){
-                        m.delete().catch(console.error);
+                    if(messages.author.id == bot.user.id){
+                        message.delete().catch(console.error);
                         deletedMessages++;
                     }
                 });
@@ -26,7 +26,7 @@ module.exports = {
                 .setDescription(`✅ Purged \`${deletedMessages}\` messages.`)
                 .setTimestamp();
                 message.channel.send({ embed: embed })
-                    .then(m => m.delete(2000));
+                    .then(m => message.delete(2000));
             }).catch(console.error);
 
         }else {
