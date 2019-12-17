@@ -99,6 +99,9 @@ bot.on('message', message => {
             bot.commands.get('setup').execute(message, args);
             break;
 
+        case 'purge':
+            bot.commands.get('purge').execute(message, args);
+            break;
     }
 })
 
